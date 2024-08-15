@@ -1,0 +1,734 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #EEEEEE;
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Global Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+ /* General Styles for Centering Headings */
+h1, h2, h3, h4, h5, h6 {
+    padding: 20px 0; /* Adjust padding as needed */
+    margin: 0;
+    text-align: center; /* Center headings */
+}
+
+/* Specific Adjustments for Headings in Sections */
+.home h1, .about-content h2, .skills h2, .achievement-section h2 {
+    padding: 20px 0; /* More padding around section headings */
+}
+
+/* Additional spacing around headings in sections */
+.home h1 {
+    padding: 30px 0; /* Increased padding for home section heading */
+}
+
+.about-content h2 {
+    padding: 20px 0; /* Padding for about section heading */
+}
+
+.skills h2 {
+    padding: 20px 0; /* Padding for skills section heading */
+}
+
+.achievement-section h2 {
+    padding: 20px 0; /* Padding for achievements section heading */
+}
+
+/* Header Styles */
+.header {
+    background-color: #393E46;
+    color: #EEEEEE;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #00ADB5;
+    font-weight: bold; /* Make the logo text bold */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #EEEEEE;
+    font-size: 16px;
+    padding: 10px 15px; /* Increased padding for better click area */
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.nav-link.active-link {
+    background-color: #00796B; /* New color for active link */
+    color: #FFFFFF; /* Text color for active link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow for active link */
+}
+
+.nav-link:hover {
+    background-color: #00ADB5; /* Highlight background */
+    color: #222831; /* Change text color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+/* Main Section Styles */
+.main-content {
+    background-color: #222831;
+    scroll-snap-type: y mandatory;
+}
+
+/* Section Styles */
+section {
+    height: 100vh;
+    padding: 20px;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ADB5;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.home img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.home img:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+}
+
+.home .highlight {
+    color: black; 
+}
+
+.home h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    animation: slideIn 1s ease-out;
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.home h1:hover {
+    transform: translateY(-10px); /* Move the heading up on hover */
+}
+
+.info-text {
+    font-weight: bold;
+}
+
+.social-icons {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 10px;
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.social-icons li:hover {
+    transform: translateY(-5px); /* Move the icon up on hover */
+}
+
+.social-icons a {
+    color: #EEEEEE;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #222831;
+    transform: scale(1.2); /* Scale the icon on hover */
+}
+
+
+/* About Section */
+.about {
+    background-color: #393E46;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 30px; /* Increased spacing between text and image */
+    padding: 20px; /* Padding around the content for better spacing */
+}
+
+.about-text {
+    flex: 2;
+    font-size: 1.2rem; /* Larger font size for better readability */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for multiple properties */
+    position: relative; /* Required for positioning pseudo-elements */
+    padding: 10px; /* Optional padding for better spacing */
+}
+
+.about-text:hover {
+    background-color: rgba(0, 173, 181, 0.1); /* Light background color to highlight text */
+    text-shadow: 1px 1px 5px rgba(0, 173, 181, 0.5); /* Add a subtle text shadow */
+    transform: translateY(-5px); /* Slightly move text up for a lifting effect */
+}
+
+
+.about-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00ADB5; /* Highlight underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Smooth underline transition */
+}
+
+.about-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.about-img {
+    flex: 1;
+    text-align: center;
+    padding: 10px; /* Added padding for space around the image */
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effects */
+}
+
+.about-img img:hover {
+    transform: scale(1.1) translateY(-5px); /* Scale up and move up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.about-text h2 {
+    margin-bottom: 30px; /* Added space below the heading */
+}
+
+.btn-default {
+    background-color: #00ADB5;
+    color: #222831;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none; /* Remove underline from links if used */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #00a8a8; /* Change background color */
+    color: #FFFFFF; /* Change text color */
+    transform: scale(1.05); /* Slightly scale up the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Education Section */
+.timeline-box {
+    background-color: #393E46;
+    padding: 20px; /* Reduced padding */
+    border-radius: 8px;
+    width: 80%; /* Reduced width */
+    max-width: 800px; /* Maximum width for larger screens */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto; /* Center the container */
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    border-left: 4px solid #00ADB5;
+    padding-left: 20px;
+    position: relative;
+    background-color: #222831;
+    border-radius: 8px;
+    padding: 10px; /* Reduced padding */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px; 
+}
+
+/* Hover effect for timeline items */
+.timeline-item:hover {
+    background-color: #393E46;
+    color: #00ADB5; /* Change text color on hover */
+    transform: translateY(-10px); /* Move item up by 10px on hover */
+}
+
+/* Styling for images inside timeline items */
+.timeline-item img {
+    width: 100px;
+    border-radius: 4px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+    display: block; /* Ensure the image is a block element for better alignment */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Hover effect for images inside timeline items */
+.timeline-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.timeline-icon {
+    color: #00ADB5;
+    position: absolute;
+    left: -30px; /* Adjust as needed to position the icon correctly */
+    top: 10px; /* Center the icon vertically with the timeline item */
+    font-size: 2rem; /* Increase icon size for better visibility */
+    border-radius: 50%; /* Make the icon round */
+    background: #fff; /* Background color of the circle */
+    border: 2px solid #00ADB5; /* Border color matching the icon */
+    padding: 8px; /* Space between the icon and the border */
+    box-shadow: 0 0 0 3px #e0e0e0; /* Optional shadow for better visibility */
+}
+
+/* Internships Section */
+.internships {
+    background-color: #222831;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.internship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.internship-item {
+    background-color: #393E46;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Ensure text is readable against the background */
+    text-align: left; /* Align text to the left for readability */
+}
+
+.internship-item:hover {
+    transform: translateY(-10px);
+    background-color: #00ADB5;
+    color: #222831; /* Change text color on hover for better contrast */
+}
+
+.internship-item:hover h3 {
+    color: #ffffff; /* Ensure heading color is white on hover */
+}
+
+.internship-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    display: block; /* Ensure image aligns well with text */
+}
+
+.internship-item .internship-content {
+    flex: 1;
+}
+
+.internship-item h3 {
+    margin-top: 0;
+    font-size: 1.6rem; /* Enhanced font size for better visibility */
+    color: #00ADB5; /* Set heading color to #00ADB5 */
+}
+
+.internship-item p {
+    font-size: 1rem; /* Adjust font size for paragraph */
+    color: #d1d1d1; /* Light gray color for paragraph text */
+    line-height: 1.6; /* Improve readability with increased line height */
+    margin-bottom: 15px; /* Add space below paragraphs */
+}
+
+.internship-item ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.internship-item ul li {
+    margin-bottom: 10px;
+    font-size: 1rem; /* Consistent font size for list items */
+    color: #d1d1d1; /* Light gray color for list items */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Projects Section */
+#projects {
+    background-color: #222831;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.project-item {
+    background-color: #393E46;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex: 0 0 auto;
+    width: 300px;
+    position: relative;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    background-color: #00ADB5;
+    color: #222831;
+}
+
+.project-item:hover h3 {
+    color: #ffffff; /* Ensure heading color is white on hover */
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 1.6rem; /* Enhanced font size for better visibility */
+    color: #00ADB5; /* Set heading color to #00ADB5 */
+}
+
+.project-item p {
+    font-size: 1rem; /* Adjust font size for description */
+    line-height: 1.6; /* Improve readability with increased line height */
+    color: #d1d1d1; /* Light gray color for paragraph text */
+    margin-bottom: 15px; /* Add space below the paragraph */
+}
+
+.project-image {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Skills Section */
+.skills {
+    background-color: #393E46;
+    padding: 50px 0;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-box {
+    background-color: #00ADB5; /* Primary background color */
+    color: #222831; /* Text color for contrast */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 15px; /* Reduced padding for a smaller box */
+    width: 150px; /* Reduced width for a more compact layout */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Smaller font size for a compact design */
+    font-weight: bold; /* Bold font for emphasis */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 8px; /* Reduced space between skill boxes */
+    position: relative; /* Needed for pseudo-elements if used */
+}
+
+/* Hover effect for skill boxes */
+.skill-box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: #0096a1; /* Darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    color: #ffffff; /* Text color changes to white on hover */
+}
+
+
+/* Additional styles to ensure proper layout */
+.skill-category {
+    display: flex;
+    flex-wrap: wrap; /* Allows the boxes to wrap to the next line if there's not enough space */
+    gap: 10px; /* Space between rows of skill boxes */
+    align-items: center;
+}
+
+/* Achievement Section */
+.achievement-section {
+    background-color: #393E46;
+    padding: 50px 20px; /* Adjusted padding for better spacing on smaller screens */
+    text-align: center;
+}
+
+/* Achievement List */
+.achievement-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Achievement List Items */
+.achievement-list li {
+    background: linear-gradient(145deg, #00ADB5, #009EAA); /* Gradient background for a modern look */
+    border-radius: 12px; /* Slightly larger border-radius for a softer look */
+    padding: 20px; /* Increased padding for better spacing */
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 600px;
+    text-align: center; /* Center-aligned text */
+    color: #222831; /* Light text color for better readability on dark background */
+    font-size: 18px; /* Font size remains the same */
+    font-weight: 500; /* Medium weight for better text visibility */
+    line-height: 1.6; /* Increased line height for improved readability */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Deeper shadow for a more pronounced effect */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+}
+
+/* Hover effect for achievement list items */
+.achievement-list li:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    background: linear-gradient(145deg, #009EAA, #00ADB5); /* Reversed gradient on hover */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+    color: #ffffff; /* Text color changes to white on hover for contrast */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .achievement-list {
+        flex-direction: column;
+    }
+
+    .achievement-list li {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+}
+
+
+/* Contact Form Container */
+.contact-form {
+    background-color: #393E46;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Heading Styling */
+.contact-form h2 {
+    margin-top: 0;
+    color: #00ADB5; /* Heading color to match the theme */
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: 600; /* Slightly bolder for better readability */
+}
+
+/* Form Field Container */
+.form-field {
+    margin-bottom: 15px;
+    text-align: left; /* Align placeholders to the left */
+}
+
+/* Input Fields and Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 22px); /* Adjusted to account for padding and borders */
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #00ADB5;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added transition for focus effects */
+}
+
+/* Placeholder Styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #AAAAAA; /* Lighter color for placeholders */
+    opacity: 1; /* Ensure placeholder is fully opaque */
+}
+
+/* Input Fields and Textarea Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00a8a8; /* Lighter border color on focus */
+    box-shadow: 0 0 5px rgba(0, 168, 168, 0.5); /* Subtle shadow for focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button Styling */
+.contact-form button {
+    background-color: #00ADB5;
+    color: #222831;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+.contact-form button:hover {
+    background-color: #00a8a8;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #393E46;
+    color: #EEEEEE;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #EEEEEE;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00ADB5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
